@@ -1,7 +1,8 @@
 import * as React from "react";
 import NumberOutput from '../numberOutput'
+import { CalculatorModel } from "../../interfaces/calculatorModels";
 interface Props {
-
+    calculatorState: CalculatorModel;
 }
 const holderStyle = {
     marginTop: '20px',
@@ -9,12 +10,12 @@ const holderStyle = {
 }
 export class OutputHolder extends React.Component<Props> {
     render(){
-        const initValue = [0,1];
-        const operator = initValue[0], operand = initValue[1];
-        const sum = operator + operand;
-        const dif = operator - operand;
-        const mul = operator * operand;
-        const dvs = operand ? 0:operator / operand;
+        const operandA:number = this.props.calculatorState.operandA;
+        const operandB:number = this.props.calculatorState.operandB;
+        const sum = Number(operandA) + Number(operandB);
+        const dif = operandA - operandB;
+        const mul = operandA * operandB;
+        const dvs = operandB ? operandA / operandB:0;
         return (
             <div style = {holderStyle}>
                 <NumberOutput

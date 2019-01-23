@@ -1,7 +1,10 @@
 import * as React from "react";
 import NumberInput from '../numberInput'
-interface Props {
+import { CalculatorModel } from "../../interfaces/calculatorModels";
 
+interface Props {
+    calculatorState: CalculatorModel;
+    actions: any;
 }
 const holderStyle = {
     marginTop: '20px',
@@ -9,16 +12,17 @@ const holderStyle = {
 }
 export class InputHolder extends React.Component<Props> {
     render(){
-        const initValue = [0, 1];
         return (
             <div style = {holderStyle}>
                 <NumberInput
-                    name = "OPERATOR"
-                    value = {initValue[0]}
+                    name = "OPERANDA"
+                    value = {this.props.calculatorState.operandA}
+                    callback = {this.props.actions.setOperandA}
                 />
                 <NumberInput
-                    name = "OPERAND"
-                    value = {initValue[1]}
+                    name = "OPERANDB"
+                    value = {this.props.calculatorState.operandB}
+                    callback = {this.props.actions.setOperandB}
                 />
             </div>
         );
