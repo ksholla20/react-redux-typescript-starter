@@ -12,7 +12,7 @@ npm start # Starts development server (or yarn start)
 ```
 
 ## Checkpoint versions
-[Tag 1.0](https://github.com/ksholla20/react-redux-typescript-starter/tree/1.0): Bare minimum Project created with create-react-app
-[Tag 1.1](https://github.com/ksholla20/react-redux-typescript-starter/tree/1.1): Project with View layer added. No reductions happening
-[Tag 2.0](https://github.com/ksholla20/react-redux-typescript-starter/tree/2.0): Full working version with redux code added
+[Tag 1.0](https://github.com/ksholla20/react-redux-typescript-starter/tree/1.0): Bare minimum Project created with create-react-app <br/>
+[Tag 1.1](https://github.com/ksholla20/react-redux-typescript-starter/tree/1.1): Project with View layer added. No reductions happening <br/>
+[Tag 2.0](https://github.com/ksholla20/react-redux-typescript-starter/tree/2.0): Full working version with redux code added <br/>
 
